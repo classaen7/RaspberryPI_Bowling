@@ -48,7 +48,7 @@ pin_dict = {
     pin1 : (213,27,221,35),
     
     pin2 : (208,19,216,27),
-    pin3 : (217,19,225,27),
+    pin3 : (218,19,226,27),
     
     pin4 : (204,11,212,19),
     pin5 : (213,11,221,19),
@@ -56,8 +56,8 @@ pin_dict = {
     
     pin7 : (200,3,208,11),
     pin8 : (209,3,217,11),
-    pin9 : (217,3,225,11),
-    pin10 : (225,3,233,11)
+    pin9 : (218,3,226,11),
+    pin10 : (226,3,234,11)
     
 }
 
@@ -126,6 +126,7 @@ def main():
     
     ball = Ball(zzangu.xpos)
     
+    #시작화면
     while True:
         if on_game == 0:
             fnt = ImageFont.truetype("/home/kau-esw/balling-game/font/RixInooAriDuri Regular.ttf", 27)
@@ -268,8 +269,8 @@ def main():
                     zzangu.move_state="ON"
                     
                     #핀이 넘어졌는지 확인 -> 넘어진 핀에 대하여 아예 사라지게 끔
-                    for pin in pin_list:
-                        pin.is_fall()
+                    # for pin in pin_list:
+                    #     pin.is_fall()
                 
                 # 공이 굴러가는 동안에 대한 처리
                 ball.roll()
@@ -279,6 +280,9 @@ def main():
                     pin.collide_ball(ball)
                     pin.hit_back()
                     pin.is_fall()
+                
+                
+                    
                 
                 
             
@@ -345,7 +349,7 @@ def main():
             
 
                 
-            
+        #최종 점수표
         elif on_game==2:
             fnt = ImageFont.truetype("/home/kau-esw/balling-game/font/RixInooAriDuri Regular.ttf", 27)
             temp_img = Image.new("RGB",(240,240),"#3cd275")

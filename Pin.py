@@ -8,14 +8,14 @@ class Pin:
     def __init__(self,xpos,ypos,lb=None,rb=None,mb=None):
         self.xpos = xpos
         self.ypos = ypos
-        self.state = "ON" # ON / OFF / Left_fall / Right_fall / Mid_fall
-        self.radius = 2.5
+        self.state = "ON" # ON / OFF / Left_fall / Right_fall / Mid_fall / ball_hit / pin_hit
+        self.radius = 3.5
         
         self.left_back = lb
         self.right_back = rb
         self.mid_back = mb
         
-        self.is_hit_back= 'False'
+        self.is_hit_back= "False"
         
     
     def darw_pin(self,bg):
@@ -47,30 +47,37 @@ class Pin:
         if ball.state != "OFF" and self.state=="ON":
             x = self.xpos - ball.xpos
             y = self.ypos - ball.ypos
+            
             dist = math.sqrt((x * x) + (y * y))
             
             if dist < ball.radius + self.radius and self.state=="ON":
-                xdiff = abs(self.xpos - ball.xpos)
+                xdiff = abs(x)
+                std_dist = self.radius+ball.radius
+                #볼링공이 볼링핀이 끝부분을 살짝 치는 경우 -> 뒤에 핀을 넘어 뜨리지 않음
                 
-                #볼링공이 볼링핀이 끝부분을 살짝 치는 경우
-                if 5 <= xdiff <= 9.5:
-                
+                if std_dist-1 <= xdiff <= std_dist:
                     if self.xpos > ball.xpos:
                         self.state = "Left_fall"
                     else:
                         self.state = "Right_fall"
                 #볼링공이 볼링핀을 넘어 트리는데 그 핀이 뒤에 핀을 넘어뜨릴수 있는 경우
-                elif 2 < xdiff < 7:
-                    self.is_hit_back = 'True'
+                elif 4 < xdiff < std_dist-1:
+                    self.is_hit_back = "ball_hit"
+                    if self.xpos > ball.xpos:
+                        self.state = "Left_fall"
+                    else:
+                        self.state = "Right_fall"
+                elif 2 < xdiff < 4:
                     if self.xpos > ball.xpos:
                         self.state = "Left_fall"
                     else:
                         self.state = "Right_fall"
                 #볼링공이 볼링핀을 정확히 가운데서 치는 경우
                 else:
-                    self.is_hit_back = 'True'
+                    self.is_hit_back = "ball_hit"
                     self.state = "Mid_fall"
                    
+    
                     
     
     #볼링공이 다 지나간 뒤에 볼링핀들이 넘어져있는지 확인하는 코드
@@ -80,17 +87,20 @@ class Pin:
 
 
     def hit_back(self):
-        if self.is_hit_back == 'True':
+        if self.is_hit_back == "True":
             if self.state == "Left_fall" and self.left_back != None:
                 self.left_back.state = "Left_fall"
-                self.left_back.is_hit_back = 'True'
+                self.left_back.is_hit_back = "True"
             elif self.state == "Right_fall" and self.right_back != None:
                 self.right_back.state = "Right_fall"
-                self.right_back.is_hit_back = 'True'
+                self.right_back.is_hit_back = "True"
             elif self.state == "Mid_fall" and self.mid_back != None:
                 self.mid_back.state = "Mid_fall"
-                self.mid_back.is_hit_back = 'True'
+                self.mid_back.is_hit_back = "True"
     
+    
+        
+            
         
         
             

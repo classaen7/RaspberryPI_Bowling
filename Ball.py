@@ -15,7 +15,7 @@ class Ball:
         self.grad=0
         self.xplus = 0
         self.yplus = 0
-        self.radius = 7
+        self.radius = 9
         
         
     def draw_ball(self,bg):

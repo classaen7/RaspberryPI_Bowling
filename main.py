@@ -111,7 +111,7 @@ def main():
     game_state = 0  
     
     game_stage =1 # 1~5
-    game_turn = 1 # 1or2
+    game_turn = 1 # 1 or 2
     
     
     

@@ -86,6 +86,7 @@ class ScoreDisplay:
 
             draw.ellipse(pin_dict[pin],fill=fillcolor)
             
+            
     def point(self,hit_position,draw):
         #200~234 = 34
         #90~150 = 60
@@ -97,8 +98,8 @@ class ScoreDisplay:
             poly_xpos = 203
         elif poly_xpos >= 237:
             poly_xpos = 237
-        draw.polygon([(poly_xpos-3,45),(poly_xpos+3,45),(poly_xpos+3,38),(poly_xpos+5,39),(poly_xpos,35)
-                      ,(poly_xpos-5,39),(poly_xpos-3,39)],outline="green",fill="brown")
+        draw.polygon([(poly_xpos-3,45),(poly_xpos+3,45),(poly_xpos+3,40),(poly_xpos+5,40),(poly_xpos,35)
+                      ,(poly_xpos-5,40),(poly_xpos-3,40)],outline="#1e5f76",fill="#43abff")
             
             
             

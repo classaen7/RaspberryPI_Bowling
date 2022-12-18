@@ -234,7 +234,7 @@ def main():
                                 
                             for pin in pin_list:
                                 pin.state = "ON"
-                                pin.is_hit_back='False'
+                                pin.is_hit_by_pin="False"
                         
                         elif game_turn == 2:
                             spare_flag +=1
@@ -251,7 +251,7 @@ def main():
                                     
                         for pin in pin_list:
                             pin.state = "ON"
-                            pin.is_hit_back='False'
+                            pin.is_hit_by_pin="False"
                             
                     #모든 스테이지가 종료 되면 
                     if game_stage == 7:
@@ -278,9 +278,9 @@ def main():
                 ball.roll()
                 
                 #공이 굴러가면서 핀에 부딪히거나 핀 끼리 부딪혀 넘어지는 경우 확인
-                for pin in pin_list:
+                for pin in reversed(pin_list):
                     pin.collide_ball(ball)
-                    pin.hit_back()
+                    pin.hit_by_pin()
                     
                 
                 
@@ -375,6 +375,7 @@ def main():
                 game_stage = 1
                 game_turn = 1
                 skill_chance = 1
+                zzangu.xpos=120
     
     
 

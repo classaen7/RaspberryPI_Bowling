@@ -15,7 +15,7 @@ class Pin:
         self.right_back = rb
         self.mid_back = mb
         
-        self.is_hit_back= "False"
+        self.is_hit_by_pin= "False" #앞의 핀에게 맞았는지 확인하는 변수
         
     
     def darw_pin(self,bg):
@@ -55,18 +55,21 @@ class Pin:
                 std_dist = self.radius+ball.radius
                 #볼링공이 볼링핀이 끝부분을 살짝 치는 경우 -> 뒤에 핀을 넘어 뜨리지 않음
                 
-                if std_dist-2 <= xdiff <= std_dist:
+                if std_dist-1 <= xdiff <= std_dist:
                     if self.xpos < ball.xpos:
                         self.state = "Left_fall"
                     else:
                         self.state = "Right_fall"
                 #볼링공이 볼링핀을 넘어 트리는데 그 핀이 뒤에 핀을 넘어뜨릴수 있는 경우
-                elif 3 <= xdiff < std_dist-2:
-                    self.is_hit_back = "ball_hit"
+                elif 0 <= xdiff < std_dist-1:
                     if self.xpos > ball.xpos:
                         self.state = "Left_fall"
+                        if self.left_back != None:
+                            self.left_back = self.state
                     else:
                         self.state = "Right_fall"
+                        if self.right_back != None:
+                            self.right_back.is_hit_by_pin = self.state
                 elif 1 < xdiff < 3:
                     if self.xpos < ball.xpos:
                         self.state = "Left_fall"
@@ -74,8 +77,9 @@ class Pin:
                         self.state = "Right_fall"
                 #볼링공이 볼링핀을 정확히 가운데서 치는 경우
                 else:
-                    self.is_hit_back = "ball_hit"
                     self.state = "Mid_fall"
+                    if self.mid_back != None:
+                        self.mid_back.is_hit_by_pin = self.state
                    
     
                     
@@ -86,17 +90,25 @@ class Pin:
             self.state = "OFF"
 
 
-    def hit_back(self):
-        if self.is_hit_back == "True":
-            if self.state == "Left_fall" and self.left_back != None:
-                self.left_back.state = "Left_fall"
-                self.left_back.is_hit_back = "True"
-            elif self.state == "Right_fall" and self.right_back != None:
-                self.right_back.state = "Right_fall"
-                self.right_back.is_hit_back = "True"
-            elif self.state == "Mid_fall" and self.mid_back != None:
-                self.mid_back.state = "Mid_fall"
-                self.mid_back.is_hit_back = "True"
+    def hit_by_pin(self):
+        if self.is_hit_by_pin != "False":
+            if self.state == "ON":
+                if self.is_hit_by_pin == "Left_fall":
+                    self.state = "Left_fall"
+                    if self.left_back!=None:
+                        self.left_back.is_hit_by_pin = self.state
+                    
+                elif self.is_hit_by_pin == "Right_fall":
+                    self.state = "Right_fall"
+                    if self.right_back!=None:
+                        self.right_back.is_hit_by_pin = self.state
+                    
+                elif self.is_hit_by_pin == "Mid_fall":
+                    self.state = "Mid_fall"
+                    if self.mid_back!=None:
+                        self.mid_back.is_hit_by_pin = self.state
+                    
+                
     
     
         

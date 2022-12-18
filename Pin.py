@@ -61,16 +61,16 @@ class Pin:
                     else:
                         self.state = "Right_fall"
                 #볼링공이 볼링핀을 넘어 트리는데 그 핀이 뒤에 핀을 넘어뜨릴수 있는 경우
-                elif 0 <= xdiff < std_dist-1:
+                elif 2.5 <= xdiff < std_dist-1:
                     if self.xpos > ball.xpos:
                         self.state = "Left_fall"
                         if self.left_back != None:
-                            self.left_back = self.state
+                            self.left_back.is_hit_by_pin = self.state
                     else:
                         self.state = "Right_fall"
                         if self.right_back != None:
                             self.right_back.is_hit_by_pin = self.state
-                elif 1 < xdiff < 3:
+                elif 1 < xdiff < 2.5:
                     if self.xpos < ball.xpos:
                         self.state = "Left_fall"
                     else:

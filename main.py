@@ -16,7 +16,7 @@ from digitalio import DigitalInOut, Direction
 from PIL import Image, ImageDraw, ImageFont
 from adafruit_rgb_display import st7789
 
-    
+#볼링핀 생성
 pin7 = Pin(97,91)
 pin8 = Pin(113,91)
 pin9 = Pin(127,91)
@@ -31,6 +31,7 @@ pin3 = Pin(128,95,pin5,pin6,pin9)
 
 pin1 = Pin(120,97,pin2,pin3,pin5)
     
+#볼링핀 리스트
 pin_list = [
     pin10,
     pin9,
@@ -44,6 +45,7 @@ pin_list = [
     pin1
 ]
 
+#스코어 디스플레이에서 가상 볼링핀을 보여주기 위한 좌표
 pin_dict = {
     pin1 : (213,27,221,35),
     
@@ -61,6 +63,7 @@ pin_dict = {
     
 }
 
+#스코어 디스플레이에서 점수와 좌표
 score_dict = {
     "1_1": ["False",(12,15)],
     "1_2": ["False",(37,15)],
@@ -81,6 +84,7 @@ score_dict = {
     "6_2": ["False",(137,15)],
 }
 
+#최종 점수를 종합하는 함수
 def total_score(score_dict):
     score = 0
     for i in range(1,7):
@@ -314,7 +318,7 @@ def main():
             draw = ImageDraw.Draw(score_img)
             
             
-            
+            #아래의 플래그들은 스트라이크, 스페어시 두번 깜빡이면서 이미지 출력을 하기 위함
             if sleep_flag == 1:
                 score_disp.bg(draw,game_stage-1<=3)
                 score_disp.score(score_dict,stage_score,draw,game_stage-1<=3)    

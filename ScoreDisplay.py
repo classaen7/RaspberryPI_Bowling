@@ -77,6 +77,7 @@ class ScoreDisplay:
         
     
     def pin(self,pin_list,pin_dict,draw):
+        draw.polygon([(195,0),(195,45),(196,45),(196,0)],outline="brown",fill="brown")
         for pin in pin_list:
             if pin.state =="ON":
                 fillcolor = "#FFFFFF"
@@ -84,6 +85,20 @@ class ScoreDisplay:
                 fillcolor = "green"
 
             draw.ellipse(pin_dict[pin],fill=fillcolor)
+            
+    def point(self,hit_position,draw):
+        #200~234 = 34
+        #90~150 = 60
+        ratio = 34/60
+        poly_xpos = (hit_position-90)*ratio+200
+        
+        fill_clr = "brown"
+        if poly_xpos <= 203:
+            poly_xpos = 203
+        elif poly_xpos >= 237:
+            poly_xpos = 237
+        draw.polygon([(poly_xpos-3,45),(poly_xpos+3,45),(poly_xpos+3,38),(poly_xpos+5,39),(poly_xpos,35)
+                      ,(poly_xpos-5,39),(poly_xpos-3,39)],outline="green",fill="brown")
             
             
             

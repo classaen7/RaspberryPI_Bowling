@@ -55,20 +55,20 @@ class Pin:
                 std_dist = self.radius+ball.radius
                 #볼링공이 볼링핀이 끝부분을 살짝 치는 경우 -> 뒤에 핀을 넘어 뜨리지 않음
                 
-                if std_dist-1 <= xdiff <= std_dist:
-                    if self.xpos > ball.xpos:
+                if std_dist-2 <= xdiff <= std_dist:
+                    if self.xpos < ball.xpos:
                         self.state = "Left_fall"
                     else:
                         self.state = "Right_fall"
                 #볼링공이 볼링핀을 넘어 트리는데 그 핀이 뒤에 핀을 넘어뜨릴수 있는 경우
-                elif 4 < xdiff < std_dist-1:
+                elif 3 <= xdiff < std_dist-2:
                     self.is_hit_back = "ball_hit"
                     if self.xpos > ball.xpos:
                         self.state = "Left_fall"
                     else:
                         self.state = "Right_fall"
-                elif 2 < xdiff < 4:
-                    if self.xpos > ball.xpos:
+                elif 1 < xdiff < 3:
+                    if self.xpos < ball.xpos:
                         self.state = "Left_fall"
                     else:
                         self.state = "Right_fall"

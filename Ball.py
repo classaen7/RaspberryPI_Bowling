@@ -51,13 +51,9 @@ class Ball:
                 bg.paste(ball_img,(int(self.xpos)-50,int(self.ypos)-26),ball_img)
                 self.radius = 6
                 
-                
-            
             
             
     def roll(self):
-        
-        
         #핀과 근접할 시 좀더 세부적으로 좌표 관리 for 충돌하는지 확인
         if self.ypos <= 101:
             if self.spin == "RIGHT":
@@ -117,7 +113,8 @@ class Ball:
             self.xplus = 0
             self.yplus = 5
             
-            
+        #그냥 굴리기
+        
         else:    
             height = 120
             target = abs(self.xpos-120) * (80/170)

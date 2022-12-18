@@ -113,7 +113,7 @@ def main():
     game_stage =1 # 1~5
     game_turn = 1 # 1 or 2
     
-    
+    hit_position = "False"
     
     skill_chance = 1
     
@@ -212,6 +212,8 @@ def main():
 
             #game_state == 2는 공이 굴러가는 상태 -> 공이 굴러가면서 해야할 처리들을 담당함
             elif game_state == 2:
+                if ball.ypos <= 91:
+                    hit_position = ball.xpos
                 
                 # 공이 다 굴러 갔을 때에 대한 처리
                 if ball.ypos <= 85:
@@ -269,8 +271,8 @@ def main():
                     zzangu.move_state="ON"
                     
                     #핀이 넘어졌는지 확인 -> 넘어진 핀에 대하여 아예 사라지게 끔
-                    # for pin in pin_list:
-                    #     pin.is_fall()
+                    for pin in pin_list:
+                        pin.is_fall()
                 
                 # 공이 굴러가는 동안에 대한 처리
                 ball.roll()
@@ -279,7 +281,7 @@ def main():
                 for pin in pin_list:
                     pin.collide_ball(ball)
                     pin.hit_back()
-                    pin.is_fall()
+                    
                 
                 
                     
@@ -304,11 +306,14 @@ def main():
             #짱구 - skill을 사용하는게 아니라면 짱구를 그림 ( 스킬을 사용한다면 짱구가 직접 굴러가기 때문에 그리지 않음 )
             if ball.state != "SKILL":
                 zzangu.draw_zz(back)
-        
+
+            
             
             # 점수판에 대한 이미지 처리
             score_img = Image.new('RGBA', (240,46), "#7fae68")
             draw = ImageDraw.Draw(score_img)
+            
+            
             
             if sleep_flag == 1:
                 score_disp.bg(draw,game_stage-1<=3)
@@ -320,7 +325,9 @@ def main():
             score_disp.state(zzangu.move_state,skill_chance,draw)
             score_disp.pin(pin_list,pin_dict,draw)
             
-            
+            if hit_position != "False":
+                score_disp.point(hit_position,draw)
+                
             # 스트라이크 or 스페어에 따른 점수판에 문자 출력 1
             if strike_flag == 1:
                 score_disp.strike_1(draw)
@@ -330,8 +337,6 @@ def main():
                 
             back.paste(score_img, (0, 0))
             joystick.disp.image(back)
-            
-            
             
             
             # 스트라이크 or 스페어에 따른 점수판에 문자 출력 2

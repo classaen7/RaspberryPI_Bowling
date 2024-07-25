@@ -1,9 +1,9 @@
-# Raspberry Pi를 이용한 파이썬 게임 프로젝트
+# Raspberry Pi를 이용한 파이썬 게임 프로젝트 (개인 프로젝트)
 
 
 <p align="center">
 
-<img src="https://private-user-images.githubusercontent.com/79098475/351939207-f375d82b-366e-4748-8a79-afbd6cb58ba7.svg?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MjE4NzU5NTQsIm5iZiI6MTcyMTg3NTY1NCwicGF0aCI6Ii83OTA5ODQ3NS8zNTE5MzkyMDctZjM3NWQ4MmItMzY2ZS00NzQ4LThhNzktYWZiZDZjYjU4YmE3LnN2Zz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDA3MjUlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQwNzI1VDAyNDczNFomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWExNzgyMWZjY2QwMTkwYjUyOTYxNDU2NjQ0OTViYWQ2MTg2NjU1N2Q5MjQxOTU1YjFlNTdkYmJlYmU4N2I0OGQmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.i1b_j8ROhlBWxmXzjuYTXXRfJ_42HGlUBO3Rc1q3QyA" alt="라즈베리파이 로고" width="12%" />
+<img src="https://private-user-images.githubusercontent.com/79098475/351939207-f375d82b-366e-4748-8a79-afbd6cb58ba7.svg?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MjE4Nzc3MzksIm5iZiI6MTcyMTg3NzQzOSwicGF0aCI6Ii83OTA5ODQ3NS8zNTE5MzkyMDctZjM3NWQ4MmItMzY2ZS00NzQ4LThhNzktYWZiZDZjYjU4YmE3LnN2Zz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDA3MjUlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQwNzI1VDAzMTcxOVomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWYyMDk1ZThjOGQ0NzEwNzNiMGVmY2JkMTFlMDQ0YmY3OTJjMzQ4YTU1NGYwNThlYmJiMWY3NWNlN2EyMDEyODkmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.6-9LQSReOBOrvzGkOZfUfn0bIgOfbfEYGdPYPYra8Rk" alt="라즈베리파이 로고" width="12%" />
 </p>
 
 임베디드 SW라는 과목을 수강하면서 라즈베리파이로 게임을 만드는 프로젝트를 하게 되었다. <br>
@@ -12,7 +12,15 @@
 어렸을 때 플래시 게임으로 짱구 볼링게임을 한적이있는데, 이를 모티브로 하여 추가적인 재미요소 또한 구현하기로 하였다. 
 
 ## Preview
-<iframe width="650" height="350" src="https://www.youtube.com/embed/o6zWwLnBUOc" title="임베디드 게임 프로젝트" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+<p style="display: flex; justify-content: center; overflow-x: auto; white-space: nowrap;">
+ 
+<img src="https://private-user-images.githubusercontent.com/79098475/351943497-9477192e-3f84-4a9a-8d62-04e73f0e2f47.gif?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MjE4Nzc3MzksIm5iZiI6MTcyMTg3NzQzOSwicGF0aCI6Ii83OTA5ODQ3NS8zNTE5NDM0OTctOTQ3NzE5MmUtM2Y4NC00YTlhLThkNjItMDRlNzNmMGUyZjQ3LmdpZj9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDA3MjUlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQwNzI1VDAzMTcxOVomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTM2ZDA0Y2FlMGM5ZGFkNWFiZDRkNDc5YmJkNzI2MzVmZWRmM2EzYjMwYTgwZTk1ZDJhZmVmMWZkNWVmYTQ3N2MmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.KF3yqW5gvbJNndxE4TbOFi5znO2yYv1g_5p0oipnXmQ" style="display: inline-block; width: auto; height: 160px;">
+<img src="https://private-user-images.githubusercontent.com/79098475/351944261-a5761a38-242b-4e2b-894c-f20245ea2f13.gif?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MjE4Nzc3MzksIm5iZiI6MTcyMTg3NzQzOSwicGF0aCI6Ii83OTA5ODQ3NS8zNTE5NDQyNjEtYTU3NjFhMzgtMjQyYi00ZTJiLTg5NGMtZjIwMjQ1ZWEyZjEzLmdpZj9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDA3MjUlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQwNzI1VDAzMTcxOVomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWM5NGMwOTA2N2ViOTQwZjUwNWFiYjcyMzg3ZjYxNThiMmE1ODU1NjUxY2VhNGU3Y2Q1MzcwYmY4MjIyMTg0YzYmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.hsqZ_3ex6_yccLc1ba5SyncCnj68b5imkA7yFFbchdw" style="display: inline-block; width: auto; height: 160px;">
+<img src="https://private-user-images.githubusercontent.com/79098475/351944295-34b39cb7-32f3-43f5-9093-90ff72541a07.gif?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MjE4Nzc3MzksIm5iZiI6MTcyMTg3NzQzOSwicGF0aCI6Ii83OTA5ODQ3NS8zNTE5NDQyOTUtMzRiMzljYjctMzJmMy00M2Y1LTkwOTMtOTBmZjcyNTQxYTA3LmdpZj9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDA3MjUlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQwNzI1VDAzMTcxOVomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTY2NjBiZmQ3YmY4N2IwMzhjY2I2MWNhNzVkZjc1ZTU1Yjk1MDkzNTIzZDY0M2JhMDhhYmM0ZTUyYjc4ZDJhNjAmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.JJBkZ1dPf4WBPNfhzL-kRtK0KIM6zXVPY5kuhKt7yRg" style="display: inline-block; width: auto; height: 160px;">
+<img src="https://private-user-images.githubusercontent.com/79098475/351944543-598d95bb-46b6-4d42-a6c7-306b53547426.gif?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MjE4Nzc3MzksIm5iZiI6MTcyMTg3NzQzOSwicGF0aCI6Ii83OTA5ODQ3NS8zNTE5NDQ1NDMtNTk4ZDk1YmItNDZiNi00ZDQyLWE2YzctMzA2YjUzNTQ3NDI2LmdpZj9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDA3MjUlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQwNzI1VDAzMTcxOVomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTNhNDk3YjJhMTIzZjEwN2Y0ZmNkZWZiMjIxYjEwMTg0YjJhN2ZjNjZmNzY3NmVmY2NmYjVjZmUzMTkyNGYzN2YmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.1C36qzU3v9EtTlgixIXfJgo3B_WhSKZR7akBZnc20zc" style="display: inline-block; width: auto; height: 160px;">
+
+</p>
 
 ## Libraries
 
@@ -42,13 +50,13 @@
 
 <p align="center">
 
-  <img src="https://github.com/classaen7/RaspberryPI_Bowling/blob/master/Assets/zzangu1step.png?raw=true" alt="짱구자세1" width="10%" />
+  <img src="https://github.com/classaen7/RaspberryPI_Bowling/blob/master/Assets/zzangu1step.png?raw=true" alt="짱구자세1" width="12%" />
 <span style="display:inline-block; width:10px;"></span>
-  <img src="https://github.com/classaen7/RaspberryPI_Bowling/blob/master/Assets/zzangu2step.png?raw=true" alt="짱구자세2" width="12%" />
+  <img src="https://github.com/classaen7/RaspberryPI_Bowling/blob/master/Assets/zzangu2step.png?raw=true" alt="짱구자세2" width="14%" />
 <span style="display:inline-block; width:20px;"></span>
-<img src="https://github.com/classaen7/RaspberryPI_Bowling/blob/master/Assets/pin1.png?raw=true" alt="핀" width="3%" />
- <span style="display:inline-block; width:30px;"></span>
-<img src="https://github.com/classaen7/RaspberryPI_Bowling/blob/master/Assets/mid_ball2.png?raw=true" alt="볼링공" width="4%" />
+<img src="https://github.com/classaen7/RaspberryPI_Bowling/blob/master/Assets/pin1.png?raw=true" alt="핀" width="4%" />
+ <span style="display:inline-block; width:60px;"></span>
+<img src="https://github.com/classaen7/RaspberryPI_Bowling/blob/master/Assets/mid_ball2.png?raw=true" alt="볼링공" width="5%" />
 
 
 </p>
@@ -66,7 +74,7 @@
 이러한 구조 속에서 사용자와 원활한 상호작용을하도록 다양한 Use Case를 구상하여 조건들을 처리하였음 <br>
 이를 **FlowChart**로 표현하면 다음과 같음<br>
 <p align="center">
-<img src="https://private-user-images.githubusercontent.com/79098475/351938284-35bd5c53-5600-4e8a-abd2-e8e00324f73d.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MjE4NzU2MDYsIm5iZiI6MTcyMTg3NTMwNiwicGF0aCI6Ii83OTA5ODQ3NS8zNTE5MzgyODQtMzViZDVjNTMtNTYwMC00ZThhLWFiZDItZThlMDAzMjRmNzNkLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDA3MjUlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQwNzI1VDAyNDE0NlomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTg0MTYwYzM1NjE2MGEwZDRiMWFkNzYwYTAyOWUwY2Q1ZTFkYzFkYzliYmJlNWFkZDdhNjg2N2ZkMjE4OWU5NmMmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.Weqlrm_Z1ra1rlq_L4K7dsOwB2ar28xOTvAhvjzNuMM" alt="FlowChart" width="70%" />
+<img src="https://private-user-images.githubusercontent.com/79098475/351938284-35bd5c53-5600-4e8a-abd2-e8e00324f73d.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MjE4Nzc3MzksIm5iZiI6MTcyMTg3NzQzOSwicGF0aCI6Ii83OTA5ODQ3NS8zNTE5MzgyODQtMzViZDVjNTMtNTYwMC00ZThhLWFiZDItZThlMDAzMjRmNzNkLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDA3MjUlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQwNzI1VDAzMTcxOVomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWRjYmYyZDNjYTVkN2ExMzJlYzFmMWViMjk2ZTU5MDRkODM2NDE1NjEwZWEyNmY0NzBhMjM1YjE5N2JiNWExNzQmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.kEv4iSCAuqEEGpXGIbdIaGr1jfbRCUWsZ8SHkgA8GvI" alt="FlowChart" width="70%" />
 
 </p>
 
@@ -80,9 +88,9 @@
 
 <p align="center">
 
-<img src="https://github.com/classaen7/RaspberryPI_Bowling/blob/master/Assets/zzzanguskill1.png?raw=true" alt="필살기1" width="12%" />
+<img src="https://github.com/classaen7/RaspberryPI_Bowling/blob/master/Assets/zzzanguskill1.png?raw=true" alt="필살기1" width="16%" />
 <span style="display:inline-block; width:20px;"></span>
-<img src="https://github.com/classaen7/RaspberryPI_Bowling/blob/master/Assets/zzzanguskill2.png?raw=true" alt="필살기2" width="12%" />
+<img src="https://github.com/classaen7/RaspberryPI_Bowling/blob/master/Assets/zzzanguskill2.png?raw=true" alt="필살기2" width="16%" />
 </p>
 
 

@@ -3,7 +3,7 @@
 
 <p align="center">
 
-<img src="https://private-user-images.githubusercontent.com/79098475/351939207-f375d82b-366e-4748-8a79-afbd6cb58ba7.svg?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MjE4Nzc3MzksIm5iZiI6MTcyMTg3NzQzOSwicGF0aCI6Ii83OTA5ODQ3NS8zNTE5MzkyMDctZjM3NWQ4MmItMzY2ZS00NzQ4LThhNzktYWZiZDZjYjU4YmE3LnN2Zz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDA3MjUlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQwNzI1VDAzMTcxOVomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWYyMDk1ZThjOGQ0NzEwNzNiMGVmY2JkMTFlMDQ0YmY3OTJjMzQ4YTU1NGYwNThlYmJiMWY3NWNlN2EyMDEyODkmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.6-9LQSReOBOrvzGkOZfUfn0bIgOfbfEYGdPYPYra8Rk" alt="라즈베리파이 로고" width="12%" />
+<img src="https://github.com/user-attachments/assets/f375d82b-366e-4748-8a79-afbd6cb58ba7" alt="라즈베리파이 로고" width="12%" />
 </p>
 
 임베디드 SW라는 과목을 수강하면서 라즈베리파이로 게임을 만드는 프로젝트를 하게 되었다. <br>
@@ -15,7 +15,7 @@
 
 <p align="center">
  
-<img src="https://private-user-images.githubusercontent.com/79098475/351954629-dad482c5-3421-4d70-bf1b-edd89d89628e.gif?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MjE4ODA1NTYsIm5iZiI6MTcyMTg4MDI1NiwicGF0aCI6Ii83OTA5ODQ3NS8zNTE5NTQ2MjktZGFkNDgyYzUtMzQyMS00ZDcwLWJmMWItZWRkODlkODk2MjhlLmdpZj9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDA3MjUlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQwNzI1VDA0MDQxNlomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTJmYjRhMjg4OWIyZjkyYmM5NmY0NThmZTg5ODM0YzI1ZmVkZGQxNDFmNDJmNjI2MTk0ZDI2ZjQzZGNhZmNiMTEmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.PJDasMjglY8IsvSt2jH9dojj4jI9WVFp5B-wZ6PqmdE">
+<img src="https://github.com/user-attachments/assets/dad482c5-3421-4d70-bf1b-edd89d89628e">
 
 </p>
 
@@ -78,7 +78,7 @@
 이러한 구조 속에서 사용자와 원활한 상호작용을하도록 다양한 Use Case를 구상하여 조건들을 처리하였음 <br>
 이를 **FlowChart**로 표현하면 다음과 같음<br>
 <p align="center">
-<img src="https://private-user-images.githubusercontent.com/79098475/351938284-35bd5c53-5600-4e8a-abd2-e8e00324f73d.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MjE4Nzc3MzksIm5iZiI6MTcyMTg3NzQzOSwicGF0aCI6Ii83OTA5ODQ3NS8zNTE5MzgyODQtMzViZDVjNTMtNTYwMC00ZThhLWFiZDItZThlMDAzMjRmNzNkLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDA3MjUlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQwNzI1VDAzMTcxOVomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWRjYmYyZDNjYTVkN2ExMzJlYzFmMWViMjk2ZTU5MDRkODM2NDE1NjEwZWEyNmY0NzBhMjM1YjE5N2JiNWExNzQmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.kEv4iSCAuqEEGpXGIbdIaGr1jfbRCUWsZ8SHkgA8GvI" alt="FlowChart" width="70%" />
+<img src="https://github.com/user-attachments/assets/35bd5c53-5600-4e8a-abd2-e8e00324f73d" alt="FlowChart" width="70%" />
 
 </p>
 

@@ -16,7 +16,7 @@ class ScoreDisplay:
         draw.polygon([ (78,13), (78,33)],outline="#FFFFFF")
         draw.polygon([ (128,13), (128,33)],outline="#FFFFFF")
         
-        fnt = ImageFont.truetype("/home/kau-esw/balling-game/font/RixInooAriDuri Regular.ttf", 9)
+        fnt = ImageFont.truetype("/home/kau-esw/balling-game/font/Default_Font.ttf", 9)
         
         if stage == 1:
             a, b, c ="1", "2", "3"
@@ -29,7 +29,7 @@ class ScoreDisplay:
         
         
     def score(self,score_dict,stage_score,draw,stage):
-        fnt = ImageFont.truetype("/home/kau-esw/balling-game/font/RixInooAriDuri Regular.ttf", 15)
+        fnt = ImageFont.truetype("/home/kau-esw/balling-game/font/Default_Font.ttf", 15)
         if stage == 1:
             g = 0
         else:

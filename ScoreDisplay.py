@@ -16,7 +16,7 @@ class ScoreDisplay:
         draw.polygon([ (78,13), (78,33)],outline="#FFFFFF")
         draw.polygon([ (128,13), (128,33)],outline="#FFFFFF")
         
-        fnt = ImageFont.truetype("/home/kau-esw/balling-game/font/Default_Font.ttf", 9)
+        fnt = ImageFont.truetype("/home/kau-esw/balling-game/Assets/Default_Font.ttf", 9)
         
         if stage == 1:
             a, b, c ="1", "2", "3"
@@ -29,7 +29,7 @@ class ScoreDisplay:
         
         
     def score(self,score_dict,stage_score,draw,stage):
-        fnt = ImageFont.truetype("/home/kau-esw/balling-game/font/Default_Font.ttf", 15)
+        fnt = ImageFont.truetype("/home/kau-esw/balling-game/Assets/Default_Font.ttf", 15)
         if stage == 1:
             g = 0
         else:
@@ -43,7 +43,7 @@ class ScoreDisplay:
                     draw.text(score_dict[str(i+g)+"_"+str(j)][1],score,font=fnt)
         
         
-        fnt = ImageFont.truetype("/home/kau-esw/balling-game/font/RixInooAriDuri Regular.ttf", 10)
+        fnt = ImageFont.truetype("/home/kau-esw/balling-game/Assets/Default_Font.ttf", 10)
         for i in range(1,4):
             if score_dict[str(i+g)+"_"+"1"][0] != 'False' and score_dict[str(i+g)+"_"+"2"][0] != 'False':
                 if score_dict[str(i+g)+"_"+"1"][0] == 10:
@@ -54,7 +54,7 @@ class ScoreDisplay:
                 
                 
     def state(self,zz,sk,draw):
-        fnt = ImageFont.truetype("/home/kau-esw/balling-game/font/RixInooAriDuri Regular.ttf", 11)
+        fnt = ImageFont.truetype("/home/kau-esw/balling-game/Assets/Default_Font.ttf", 11)
         if zz == "ON":
             move_color = "yellow"
             on_color = "#FFFFFF"
@@ -104,12 +104,12 @@ class ScoreDisplay:
             
             
     def spare_1(self,draw):
-        fnt = ImageFont.truetype("/home/kau-esw/balling-game/font/RixInooAriDuri Regular.ttf", 35)
+        fnt = ImageFont.truetype("/home/kau-esw/balling-game/Assets/Default_Font.ttf", 35)
         draw.rectangle((0,0,240,43),outline="black",fill="black")
         draw.text((50,0),"SPARE",font=fnt,fill="red")
         
     def spare_2(self,draw,back,joystick,score_img):
-        fnt = ImageFont.truetype("/home/kau-esw/balling-game/font/RixInooAriDuri Regular.ttf", 35)
+        fnt = ImageFont.truetype("/home/kau-esw/balling-game/Assets/Default_Font.ttf", 35)
         time.sleep(0.5)
         draw.rectangle((0,0,240,43),outline="black",fill="black")
         draw.text((50,0),"SPARE",font=fnt,fill="yellow")
@@ -122,12 +122,12 @@ class ScoreDisplay:
             
             
     def strike_1(self,draw):
-        fnt = ImageFont.truetype("/home/kau-esw/balling-game/font/RixInooAriDuri Regular.ttf", 35)
+        fnt = ImageFont.truetype("/home/kau-esw/balling-game/Assets/Default_Font.ttf", 35)
         draw.rectangle((0,0,240,43),outline="black",fill="black")
         draw.text((50,0),"STRIKE",font=fnt,fill="red")
     
     def strike_2(self,draw,back,joystick,score_img):
-        fnt = ImageFont.truetype("/home/kau-esw/balling-game/font/RixInooAriDuri Regular.ttf", 35)
+        fnt = ImageFont.truetype("/home/kau-esw/balling-game/Assets/Default_Font.ttf", 35)
         time.sleep(0.5)
         draw.rectangle((0,0,240,43),outline="black",fill="black")
         draw.text((50,0),"STRIKE",font=fnt,fill="yellow")

@@ -19,33 +19,33 @@ class Ball:
     def draw_ball(self,bg):
         if self.state == "ON" or self.state=="FALL":
             if self.ypos > 180:
-                ball_img = Image.open('/home/kau-esw/balling-game/Assets/front_ball.png').convert('RGBA')
+                ball_img = Image.open('./Assets/front_ball.png').convert('RGBA')
                 bg.paste(ball_img,(int(self.xpos)-12,int(self.ypos)-12),ball_img)
             elif self.ypos > 150:
-                ball_img = Image.open('/home/kau-esw/balling-game/Assets/mid_ball.png').convert('RGBA')
+                ball_img = Image.open('./Assets/mid_ball.png').convert('RGBA')
                 bg.paste(ball_img,(int(self.xpos)-11,int(self.ypos)-11),ball_img)
             elif self.ypos > 110:
-                ball_img = Image.open('/home/kau-esw/balling-game/Assets/mid_ball2.png').convert('RGBA')
+                ball_img = Image.open('./Assets/mid_ball2.png').convert('RGBA')
                 bg.paste(ball_img,(int(self.xpos)-11,int(self.ypos)-11),ball_img)
             else:
-                ball_img = Image.open('/home/kau-esw/balling-game/Assets/back_ball.png').convert('RGBA')
+                ball_img = Image.open('./Assets/back_ball.png').convert('RGBA')
                 bg.paste(ball_img,(int(self.xpos)-10,int(self.ypos)-10),ball_img)
             #ypos에 따라 공의 크기 바꾸기 
             
             
         elif self.state == "SKILL":
             if self.ypos > 180:
-                ball_img = Image.open('/home/kau-esw/balling-game/Assets/zzzanguskill1.png').convert('RGBA')
+                ball_img = Image.open('./Assets/zzzanguskill1.png').convert('RGBA')
                 bg.paste(ball_img,(int(self.xpos)-50,int(self.ypos)-26),ball_img)
                 
             elif self.ypos >150:
-                ball_img = Image.open('/home/kau-esw/balling-game/Assets/zzzanguskill2.png').convert('RGBA')
+                ball_img = Image.open('./Assets/zzzanguskill2.png').convert('RGBA')
                 bg.paste(ball_img,(int(self.xpos)-50,int(self.ypos)-26),ball_img)
             elif self.ypos >110:
-                ball_img = Image.open('/home/kau-esw/balling-game/Assets/zzzanguskill1.png').convert('RGBA')
+                ball_img = Image.open('./Assets/zzzanguskill1.png').convert('RGBA')
                 bg.paste(ball_img,(int(self.xpos)-50,int(self.ypos)-26),ball_img)
             else:
-                ball_img = Image.open('/home/kau-esw/balling-game/Assets/zzzanguskill2.png').convert('RGBA')
+                ball_img = Image.open('./Assets/zzzanguskill2.png').convert('RGBA')
                 bg.paste(ball_img,(int(self.xpos)-50,int(self.ypos)-26),ball_img)
                 self.radius = 6
                 

@@ -21,13 +21,13 @@ class Pin:
         if self.state == "ON":
             a = self.xpos - 5
             b = self.ypos - 16    
-            img = Image.open('/home/kau-esw/balling-game/Assets/pin1.png').convert('RGBA')
+            img = Image.open('./Assets/pin1.png').convert('RGBA')
             bg.paste(img,(a,b),img)
         
         elif self.state =="Left_fall":
             a = self.xpos - 10
             b = self.ypos - 11
-            img = Image.open('/home/kau-esw/balling-game/Assets/pin2.png').convert('RGBA')
+            img = Image.open('./Assets/pin2.png').convert('RGBA')
             bg.paste(img,(a,b),img)
             self.state="OFF"
             
@@ -35,7 +35,7 @@ class Pin:
         elif self.state == "Right_fall" or self.state == "Mid_fall":
             a = self.xpos - 5
             b = self.ypos - 11
-            img = Image.open('/home/kau-esw/balling-game/Assets/pin3.png').convert('RGBA')
+            img = Image.open('./Assets/pin3.png').convert('RGBA')
             bg.paste(img,(a,b),img)
             self.state="OFF"
     

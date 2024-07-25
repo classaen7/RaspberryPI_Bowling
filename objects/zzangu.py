@@ -28,21 +28,21 @@ class Zzangu:
             x = self.xpos-25
             y=175
             
-            img = Image.open('/home/kau-esw/balling-game/Assets/zzangu1step.png').convert('RGBA')
+            img = Image.open('./Assets/zzangu1step.png').convert('RGBA')
             bg.paste(img,(x,y),img)
             
         elif self.state =='ON':
             x = self.xpos-30
             y=190
             
-            img = Image.open('/home/kau-esw/balling-game/Assets/zzangu2step.png').convert('RGBA')
+            img = Image.open('./Assets/zzangu2step.png').convert('RGBA')
             bg.paste(img,(x,y),img)
             
         elif self.state =='AFT':
             x = self.xpos-30
             y= 185
             
-            img = Image.open('/home/kau-esw/balling-game/Assets/zzangu3step.png').convert('RGBA')
+            img = Image.open('./Assets/zzangu3step.png').convert('RGBA')
             bg.paste(img,(x,y),img)
             
             

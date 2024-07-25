@@ -1,6 +1,5 @@
 
-from PIL import Image, ImageDraw, ImageFont
-from Joystick import Joystick
+from PIL import ImageFont
 import time
 
 class ScoreDisplay:

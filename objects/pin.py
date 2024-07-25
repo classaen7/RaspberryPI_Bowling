@@ -1,8 +1,6 @@
 #Pin Class
-
 import math
-from PIL import Image, ImageDraw, ImageFont
-import random
+from PIL import Image
 
 class Pin:
     def __init__(self,xpos,ypos,lb=None,rb=None,mb=None):
@@ -23,13 +21,13 @@ class Pin:
         if self.state == "ON":
             a = self.xpos - 5
             b = self.ypos - 16    
-            img = Image.open('/home/kau-esw/balling-game/esw_pic/pin1.png').convert('RGBA')
+            img = Image.open('/home/kau-esw/balling-game/Assets/pin1.png').convert('RGBA')
             bg.paste(img,(a,b),img)
         
         elif self.state =="Left_fall":
             a = self.xpos - 10
             b = self.ypos - 11
-            img = Image.open('/home/kau-esw/balling-game/esw_pic/pin2.png').convert('RGBA')
+            img = Image.open('/home/kau-esw/balling-game/Assets/pin2.png').convert('RGBA')
             bg.paste(img,(a,b),img)
             self.state="OFF"
             
@@ -37,7 +35,7 @@ class Pin:
         elif self.state == "Right_fall" or self.state == "Mid_fall":
             a = self.xpos - 5
             b = self.ypos - 11
-            img = Image.open('/home/kau-esw/balling-game/esw_pic/pin3.png').convert('RGBA')
+            img = Image.open('/home/kau-esw/balling-game/Assets/pin3.png').convert('RGBA')
             bg.paste(img,(a,b),img)
             self.state="OFF"
     

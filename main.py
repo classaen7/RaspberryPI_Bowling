@@ -1,20 +1,10 @@
 #main Class
 
-from Pin import Pin
-from Zzangu import Zzangu
-from Ball import Ball
-from Joystick import Joystick
-from ScoreDisplay import ScoreDisplay
-
+from objects import Pin, Zzangu, Ball, ScoreDisplay
+from joystick import Joystick
 
 import time
-import random
-from colorsys import hsv_to_rgb
-import board
-import numpy as np
-from digitalio import DigitalInOut, Direction
 from PIL import Image, ImageDraw, ImageFont
-from adafruit_rgb_display import st7789
 
 #볼링핀 생성
 pin7 = Pin(97,91)
@@ -133,16 +123,16 @@ def main():
     #시작화면
     while True:
         if on_game == 0:
-            fnt = ImageFont.truetype("/home/kau-esw/balling-game/font/RixInooAriDuri Regular.ttf", 27)
+            fnt = ImageFont.truetype("/home/kau-esw/balling-game/Assets/Default_Font.ttf", 27)
             temp_img = Image.new("RGB",(240,240),"#3cd275")
             draw = ImageDraw.Draw(temp_img)
             draw.text((13,25),"Zzangu's",font=fnt,fill="red")
             draw.text((23,55),"Balling Game",font=fnt,fill="yellow")
-            fnt = ImageFont.truetype("/home/kau-esw/balling-game/font/RixInooAriDuri Regular.ttf", 17)
+            fnt = ImageFont.truetype("/home/kau-esw/balling-game/Assets/Default_Font.ttf", 17)
             draw.ellipse((110,130,133,151),outline="white")
             draw.text((50,130),"Press  A  Button",font=fnt)
             draw.text((80,160),"To Start",font=fnt)
-            back = Image.open('/home/kau-esw/balling-game/esw_pic/normback.png')
+            back = Image.open('/home/kau-esw/balling-game/Assets/normback.png')
             back.paste(temp_img, (0, 0))
             joystick.disp.image(back)
                 
@@ -298,7 +288,7 @@ def main():
             
             #짱구, 볼링공, 핀, 배경에 대한 그리기
             #배경
-            back = Image.open('/home/kau-esw/balling-game/esw_pic/backgroundbef.png')
+            back = Image.open('/home/kau-esw/balling-game/Assets/backgroundbef.png')
             #핀 - 핀의 상태에 따른 그림
             for pin in pin_list:
                 pin.darw_pin(back)
@@ -360,13 +350,13 @@ def main():
                 
         #최종 점수표
         elif on_game==2:
-            fnt = ImageFont.truetype("/home/kau-esw/balling-game/font/RixInooAriDuri Regular.ttf", 27)
+            fnt = ImageFont.truetype("/home/kau-esw/balling-game/Assets/Default_Font.ttf", 27)
             temp_img = Image.new("RGB",(240,240),"#3cd275")
             draw = ImageDraw.Draw(temp_img)
             draw.text((13,40),"Total Score is",font=fnt,fill="white")
-            fnt = ImageFont.truetype("/home/kau-esw/balling-game/font/RixInooAriDuri Regular.ttf", 40)
+            fnt = ImageFont.truetype("/home/kau-esw/balling-game/Assets/Default_Font.ttf", 40)
             draw.text((95,120),str(total_score(score_dict)),font=fnt,fill="yellow")
-            back = Image.open('/home/kau-esw/balling-game/esw_pic/normback.png')
+            back = Image.open('/home/kau-esw/balling-game/Assets/normback.png')
             back.paste(temp_img, (0, 0))
             joystick.disp.image(back)
                 
